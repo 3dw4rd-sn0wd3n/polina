@@ -1,0 +1,64 @@
+:root {
+    --main-bg: url(https://www.spotsandstripes.com/image/cache/catalog/products/wrapping-paper/WS-EW3-A1-B1-1000x1000.jpg);
+    --primary-color: #d50000;
+    --text-color: #333;
+    --bg-color: rgba(255, 255, 255, 0.7);
+    --font-family: Arial, sans-serif;
+}
+
+body {
+    background: var(--main-bg);
+    text-align: center;
+    font-family: var(--font-family);
+    position: relative;
+}
+
+h1, p, .heart {
+    backdrop-filter: blur(5px);
+    background-color: var(--bg-color);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+h1 {
+    color: var(--primary-color);
+    z-index: 3;
+}
+
+p {
+    margin: 20px;
+    font-size: 20px;
+    color: var(--text-color);
+    width: 95%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+img, video {
+    width: 33%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .text-cont {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .text {
+        text-align: center;
+        width: 50%;
+        margin-top: 30%;
+    }
+}
+
+@media (min-width: 768px) {
+    .text {
+        margin-top: 25%;
+    }
+}
